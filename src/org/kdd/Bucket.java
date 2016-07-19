@@ -92,14 +92,12 @@ public class Bucket {
 		// if only observations of one class are in the bucket return true
 		if(this.classFreqTable.size() == 1) return true;
 		
-		// else, check if last and next-to-last element in sorted frequency array are equal
-		else{
+		// else, check if last and next-to-last element in sorted frequency array are equal		
 		ArrayList<Integer> values = new ArrayList<Integer>(this.classFreqTable.values());		
 		Collections.sort(values);				
 		if(values.get(values.size() - 1) == values.get(values.size() - 2)){
 			return false;
-		}	
-		}
+		}			
 		return true;				
 	}
 	
@@ -144,12 +142,11 @@ public class Bucket {
 	 * @return
 	 */
 	protected boolean contains(double value){
-		if(this.range.contains(value)){
-			return true;
-		}
+		if(this.range.contains(value)) return true;		
 		return false;
 	}
 		
+	
 	public int getSize(){
 		return this.size;
 	}	
