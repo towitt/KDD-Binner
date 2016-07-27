@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <knimeNode icon="./default.png" type="Manipulator" xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
-    <name>KDD Binner</name>
+    <name>LUCS-KDD Binner</name>
     
     <shortDescription>
-        LUCS-KDD DN (Discretisation/ Normalisation) 
+        LUCS-KDD DN (Discretization/ Normalization) for Classification Association Rule Mining (CARM) applications.
     </shortDescription>
     
     <fullDescription>
-        <intro>Insert long description here...</intro>
-        
-        
+        <intro><p>For a complete description, see the <a href="https://cgi.csc.liv.ac.uk/~frans/KDD/Software/LUCS-KDD-DN/lucs-kdd_DN.html">website.</a></p></intro>
+              
         <option name="short name of first option (like in the dialog)">description of first option</option>
         <option name="short name of second option (like in the dialog)">description of second option</option>
         <!-- possibly more options that can also be grouped by tabs -->
