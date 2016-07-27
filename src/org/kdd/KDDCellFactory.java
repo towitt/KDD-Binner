@@ -8,12 +8,20 @@ import org.knime.core.data.def.StringCell;
 import org.knime.core.data.DoubleValue;
 import org.knime.core.data.MissingCell;
 
+/**
+ * @author Tobias Witt, University of Konstanz
+ *
+ */
 public class KDDCellFactory extends SingleCellFactory {
 	
 	private BucketList buckets;
 	
-	public KDDCellFactory(DataColumnSpec newColSpec, BucketList buckets) {
-		super(newColSpec);
+	/**
+	 * @param colSpec
+	 * @param buckets
+	 */
+	public KDDCellFactory(DataColumnSpec colSpec, BucketList buckets) {
+		super(colSpec);
 		this.buckets = buckets;		
 	}
 	
@@ -21,7 +29,7 @@ public class KDDCellFactory extends SingleCellFactory {
 	public DataCell getCell(DataRow row) {	
 		
 		// position of feature
-		int colIndex = this.buckets.getColIndex(this.buckets.feature);		
+		int colIndex = this.buckets.getColIndex(this.buckets.getFeature());		
 		
 		DataCell category;
 		
