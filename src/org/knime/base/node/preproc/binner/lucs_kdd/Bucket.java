@@ -11,6 +11,10 @@ import org.knime.core.data.DataCell;
 import com.google.common.collect.Range;
 
 
+/**
+ * @author Tobias Witt, University of Konstanz
+ *
+ */
 public class Bucket {
 
 	// number of elements in bucket
@@ -25,7 +29,10 @@ public class Bucket {
 	// dominant class in bucket
 	private DataCell dominantClass;
 	
-	// constructor
+	/**
+	 * Constructor
+	 * @param range
+	 */
 	public Bucket(Range<Double> range){
 				
 		this.range = range;
@@ -58,8 +65,7 @@ public class Bucket {
 		
 	
 	/**
-	 * Return the dominant class in the bucket (if it exists)
-	 * @return
+	 * Set the dominant class in the bucket (if it exists)
 	 */
 	protected void determineDominantClass(){
 		
@@ -68,14 +74,14 @@ public class Bucket {
 		
 		// get class with maximum frequency
 		int max = 0;
-		DataCell dominantClass = null;		
+		DataCell domClass = null;		
 		for(Entry<DataCell, Integer> entry : this.classFreqTable.entrySet()){
 			if(entry.getValue() > max){
 				max = entry.getValue();
-				dominantClass = entry.getKey();        		
+				domClass = entry.getKey();        		
         	}
 		}		
-        this.dominantClass = dominantClass;
+        this.dominantClass = domClass;
 	}
 		
 	
@@ -93,7 +99,7 @@ public class Bucket {
 		if(this.classFreqTable.size() == 1) return true;
 		
 		// else, check if last and next-to-last element in sorted frequency array are equal		
-		ArrayList<Integer> values = new ArrayList<Integer>(this.classFreqTable.values());		
+		ArrayList<Integer> values = new ArrayList<>(this.classFreqTable.values());		
 		Collections.sort(values);				
 		if(values.get(values.size() - 1) == values.get(values.size() - 2)){
 			return false;
@@ -130,8 +136,8 @@ public class Bucket {
 		
 		// calculate proportion of dominant class in the bucket
 		if(this.dominantClass == null) this.determineDominantClass();
-		double ndom = (double) this.getClassFreqTable().get(this.dominantClass);		
-		double n = (double) this.getSize();
+		double ndom = this.getClassFreqTable().get(this.dominantClass);		
+		double n = this.getSize();
 		return ndom/n;
 	}	
 	
@@ -147,26 +153,45 @@ public class Bucket {
 	}
 		
 	
+	/**
+	 * @return size
+	 */
 	public int getSize(){
 		return this.size;
 	}	
 	
+	/**
+	 * @return the dominant class
+	 */
 	public DataCell getDominantClass(){
 		return this.dominantClass;
 	}
 	
+	/**
+	 * @param dominantClass
+	 */
 	public void setDominantClass(DataCell dominantClass){
 		this.dominantClass = dominantClass;
 	}
 	
+	/**
+	 * @return class frequency table
+	 */
 	public Map<DataCell, Integer> getClassFreqTable(){
 		return this.classFreqTable;
 	}
 	
+	/**
+	 * @return the range
+	 */
 	public Range<Double> getRange(){
 		return this.range;
 	}
 	
+	/**
+	 * Set the range
+	 * @param range
+	 */
 	public void setRange(Range<Double> range){
 		this.range = range;
 	}
