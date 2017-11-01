@@ -4,7 +4,7 @@
 	<extension point="org.knime.workbench.repository.nodes">
       <node 
       	category-path="/manipulation/column/binning"
-      	factory-class="org.kdd.KDDNodeFactory"
+      	factory-class="org.knime.base.node.preproc.binner.lucs_kdd.KDDNodeFactory"
       />
 	</extension>
 </plugin>

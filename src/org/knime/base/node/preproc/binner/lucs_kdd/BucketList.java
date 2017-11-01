@@ -1,4 +1,4 @@
-package org.kdd;
+package org.knime.base.node.preproc.binner.lucs_kdd;
 
 import java.util.ArrayList;
 

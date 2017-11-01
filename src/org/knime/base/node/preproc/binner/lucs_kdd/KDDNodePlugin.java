@@ -2,7 +2,7 @@
  * $Revision$ $Date$ $Author$
  *
  */
-package org.kdd;
+package org.knime.base.node.preproc.binner.lucs_kdd;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;

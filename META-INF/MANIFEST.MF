@@ -4,7 +4,7 @@ Bundle-Name: KDD-Node extension for KNIME Workbench
 Bundle-SymbolicName: org.kdd; singleton:=true
 Bundle-Version: 1.0.0
 Bundle-ClassPath: kdd.jar
-Bundle-Activator: org.kdd.KDDNodePlugin
+Bundle-Activator: org.knime.base.node.preproc.binner.lucs_kdd.KDDNodePlugin
 Bundle-Vendor: Tobias Witt
 Require-Bundle: org.eclipse.core.runtime,
  org.knime.workbench.core,
@@ -13,5 +13,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.knime.core,
  com.google.guava
 Bundle-ActivationPolicy: lazy
-Export-Package: org.kdd
+Export-Package: org.knime.base.node.preproc.binner.lucs_kdd
 
