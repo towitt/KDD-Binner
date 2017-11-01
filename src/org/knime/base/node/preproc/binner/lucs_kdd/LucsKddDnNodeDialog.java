@@ -18,7 +18,7 @@ import org.knime.core.node.defaultnodesettings.DialogComponentNumber;
  * 
  * @author Tobias Witt
  */
-public class KDDNodeDialog extends DefaultNodeSettingsPane {
+public class LucsKddDnNodeDialog extends DefaultNodeSettingsPane {
 
     /**
      * New pane for configuring KDD node dialog.
@@ -26,22 +26,22 @@ public class KDDNodeDialog extends DefaultNodeSettingsPane {
      * components.
      */
 	@SuppressWarnings({ "unchecked"})
-    protected KDDNodeDialog() {
+    protected LucsKddDnNodeDialog() {
         super();
         
         // class attribute
     	addDialogComponent(new DialogComponentColumnNameSelection(
-    			KDDNodeModel.createClassColModel(), 
+    			LucsKddDnNodeModel.createClassColModel(), 
     			"Class Column",
     			0, true, NominalValue.class));
     	
     	// desired number of divisions
     	addDialogComponent(new DialogComponentNumber(
-    			KDDNodeModel.createNumDivisionsModel(), "Max. number of divisions:", 1));
+    			LucsKddDnNodeModel.createNumDivisionsModel(), "Max. number of divisions:", 1));
     	
     	// choose features
     	addDialogComponent(new DialogComponentColumnFilter2(
-    		KDDNodeModel.createIncludedFeaturesModel(), 0));                     
+    		LucsKddDnNodeModel.createIncludedFeaturesModel(), 0));                     
     }
 }
 

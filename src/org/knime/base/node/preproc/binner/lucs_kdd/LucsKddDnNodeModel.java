@@ -33,11 +33,11 @@ import org.knime.core.node.NodeSettingsWO;
  *
  * @author Tobias Witt
  */
-public class KDDNodeModel extends NodeModel {
+public class LucsKddDnNodeModel extends NodeModel {
     
     // the logger instance
     private static final NodeLogger logger = NodeLogger
-            .getLogger(KDDNodeModel.class);
+            .getLogger(LucsKddDnNodeModel.class);
         
     /** the settings key which is used to retrieve and 
         store the settings (from the dialog or from a settings file)    
@@ -68,7 +68,7 @@ public class KDDNodeModel extends NodeModel {
     /**
      * Constructor for the node model.
      */
-    protected KDDNodeModel() {
+    protected LucsKddDnNodeModel() {
     
         // TODO one incoming port and one outgoing port is assumed
         super(1, 1);
@@ -125,7 +125,7 @@ public class KDDNodeModel extends NodeModel {
         	}
             
         	// create cell factory
-        	cellFactory = new KDDCellFactory(createOutputColumnSpec(feature), buckets);
+        	cellFactory = new LucsKddDnCellFactory(createOutputColumnSpec(feature), buckets);
         
         	// replace column
         	outputTable.replace(cellFactory, feature);       

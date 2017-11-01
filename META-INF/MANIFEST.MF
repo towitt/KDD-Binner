@@ -4,7 +4,7 @@ Bundle-Name: LUCS KDD Node extension for KNIME Workbench
 Bundle-SymbolicName: org.knime.base.node.preproc.binner.lucs_kdd;singleton:=true
 Bundle-Version: 1.0.0
 Bundle-ClassPath: kdd.jar
-Bundle-Activator: org.knime.base.node.preproc.binner.lucs_kdd.KDDNodePlugin
+Bundle-Activator: org.knime.base.node.preproc.binner.lucs_kdd.LucsKddDnNodePlugin
 Bundle-Vendor: University of Konstanz
 Require-Bundle: org.eclipse.core.runtime,
  org.knime.workbench.core,

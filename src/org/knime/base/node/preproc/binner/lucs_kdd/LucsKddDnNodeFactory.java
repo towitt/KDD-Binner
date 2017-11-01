@@ -10,12 +10,12 @@ import org.knime.core.node.NodeView;
  *
  * @author Tobias Witt
  */
-public class KDDNodeFactory 
-        extends NodeFactory<KDDNodeModel> {
+public class LucsKddDnNodeFactory 
+        extends NodeFactory<LucsKddDnNodeModel> {
 
     @Override
-    public KDDNodeModel createNodeModel() {
-        return new KDDNodeModel();
+    public LucsKddDnNodeModel createNodeModel() {
+        return new LucsKddDnNodeModel();
     }
 
     @Override
@@ -24,8 +24,8 @@ public class KDDNodeFactory
     }
 
     @Override
-    public NodeView<KDDNodeModel> createNodeView(final int viewIndex,
-            final KDDNodeModel nodeModel) {
+    public NodeView<LucsKddDnNodeModel> createNodeView(final int viewIndex,
+            final LucsKddDnNodeModel nodeModel) {
         return null;
     }
 
@@ -36,7 +36,7 @@ public class KDDNodeFactory
 
     @Override
     public NodeDialogPane createNodeDialogPane() {
-        return new KDDNodeDialog();
+        return new LucsKddDnNodeDialog();
     }
 
 }

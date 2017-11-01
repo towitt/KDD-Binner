@@ -16,14 +16,14 @@ import org.osgi.framework.BundleContext;
  *
  * @author Tobias Witt
  */
-public class KDDNodePlugin extends Plugin {
+public class LucsKddDnNodePlugin extends Plugin {
     // The shared instance.
-    private static KDDNodePlugin plugin;
+    private static LucsKddDnNodePlugin plugin;
 
     /**
      * The constructor.
      */
-    public KDDNodePlugin() {
+    public LucsKddDnNodePlugin() {
         super();
         plugin = this;
     }
@@ -57,7 +57,7 @@ public class KDDNodePlugin extends Plugin {
      * 
      * @return Singleton instance of the Plugin
      */
-    public static KDDNodePlugin getDefault() {
+    public static LucsKddDnNodePlugin getDefault() {
         return plugin;
     }
 

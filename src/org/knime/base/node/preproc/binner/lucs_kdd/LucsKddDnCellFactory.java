@@ -12,7 +12,7 @@ import org.knime.core.data.MissingCell;
  * @author Tobias Witt, University of Konstanz
  *
  */
-public class KDDCellFactory extends SingleCellFactory {
+public class LucsKddDnCellFactory extends SingleCellFactory {
 	
 	private BucketList buckets;
 	
@@ -20,7 +20,7 @@ public class KDDCellFactory extends SingleCellFactory {
 	 * @param colSpec
 	 * @param buckets
 	 */
-	public KDDCellFactory(DataColumnSpec colSpec, BucketList buckets) {
+	public LucsKddDnCellFactory(DataColumnSpec colSpec, BucketList buckets) {
 		super(colSpec);
 		this.buckets = buckets;		
 	}
