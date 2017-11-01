@@ -5,7 +5,7 @@ import org.knime.core.node.NodeFactory;
 import org.knime.core.node.NodeView;
 
 /**
- * <code>NodeFactory</code> for the "KDD" Node.
+ * <code>NodeFactory</code> for the "LUCS-KDD DN" Node.
  * LUCS-KDD DN (Discretisation/ Normalisation) 
  *
  * @author Tobias Witt
@@ -13,42 +13,27 @@ import org.knime.core.node.NodeView;
 public class KDDNodeFactory 
         extends NodeFactory<KDDNodeModel> {
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     public KDDNodeModel createNodeModel() {
         return new KDDNodeModel();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     public int getNrNodeViews() {
-        return 1;
+        return 0;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     public NodeView<KDDNodeModel> createNodeView(final int viewIndex,
             final KDDNodeModel nodeModel) {
-        return new KDDNodeView(nodeModel);
+        return null;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     public boolean hasDialog() {
         return true;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     public NodeDialogPane createNodeDialogPane() {
         return new KDDNodeDialog();
